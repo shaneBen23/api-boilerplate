@@ -1,3 +1,6 @@
 /node_modules
+/localStorage
+/database/data
+/localStorage
 .vscode
 .env

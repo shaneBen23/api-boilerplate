@@ -1,0 +1,130 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "version": "1.0.0",
+    "title": "Hyperledger Fabric Native Setup",
+    "description": "Hyperledger Fabric Native Setup service layer helps in setting up the network",
+    "license": {
+      "name": "Kianite",
+      "url": ""
+    }
+  },
+  "host": "localhost:3000",
+  "basePath": "/",
+  "tags": [
+    {
+      "name": "Hyperledger Fabric Native Setup",
+      "description": "Services to manage the hyperledger fabric network"
+    }
+  ],
+  "schemes": [
+    "http"
+  ],
+  "consumes": [
+    "application/json"
+  ],
+  "produces": [
+    "application/json"
+  ],
+  "paths": {
+    "/users": {
+      "post": {
+        "tags": [
+          "User"
+        ],
+        "summary": "Registration new user",
+        "description": "On-board new user to platform",
+        "parameters": [
+          {
+            "name": "email",
+            "in": "formData",
+            "description": "Enter Email",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "password",
+            "in": "formData",
+            "description": "Enter password",
+            "required": false,
+            "type": "password"
+          }
+        ],
+        "consumes": [
+          "application/x-www-form-urlencoded"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "User registration successsfully",
+            "schema": {
+              "$ref": "#/components/Response"
+            }
+          }
+        }
+      }
+    },
+    "/users/authenticate": {
+      "post": {
+        "tags": [
+          "User"
+        ],
+        "summary": "Authenticate",
+        "description": "Authenticating users from the system",
+        "parameters": [
+          {
+            "name": "email",
+            "in": "formData",
+            "description": "Enter email",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "password",
+            "in": "formData",
+            "description": "Enter password",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "consumes": [
+          "application/x-www-form-urlencoded"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "User authenticated successfully",
+            "schema": {
+              "$ref": "#/components/Response"
+            }
+          }
+        }
+      }
+    }
+  },
+
+  "components": {
+    "Response": {
+      "required": [
+        "success",
+        "message",
+        "payload"
+      ],
+      "properties": {
+        "success": {
+          "type": "boolean"
+        },
+        "message": {
+          "type": "string"
+        },
+        "payload": {
+          "type": "object"
+        }
+      }
+    }
+  }
+}
