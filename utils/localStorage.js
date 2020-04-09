@@ -1,11 +1,11 @@
-function getLocalStorage() {
-  if (typeof localStorage === "undefined" || localStorage === null) {
+function getLocalStorage(localStorage) {
+  if (typeof localStorage === 'undefined' || localStorage === null) {
     const LocalStorage = require('node-localstorage').LocalStorage;
-    localStorage = new LocalStorage(`./localStorage`);
+    localStorage = new LocalStorage('./localStorage');
   }
   return localStorage;
 }
 
 module.exports = {
   getLocalStorage
-}
+};

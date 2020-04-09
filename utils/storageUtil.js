@@ -6,7 +6,7 @@ const { getLocalStorage } = require('./localStorage');
  * Get object from server localStorage
  * @param {string} name
  */
-function getObjectFromStorage(name){
+function getObjectFromStorage(name) {
   const localStorage = getLocalStorage();
   return JSON.parse(localStorage.getItem(name)) || '';
 }
@@ -16,7 +16,7 @@ function getObjectFromStorage(name){
  * @param {string} name
  * @param {*} storeObject
  */
-function storeObjectInStorage(name, storeObject){
+function storeObjectInStorage(name, storeObject) {
   const localStorage = getLocalStorage();
   const storageObject = JSON.stringify(storeObject);
   localStorage.setItem(name, storageObject);
@@ -26,7 +26,7 @@ function storeObjectInStorage(name, storeObject){
  * Get item from server localStorage
  * @param {string} name
  */
-function getItemFromStorage(name){
+function getItemFromStorage(name) {
   const localStorage = getLocalStorage();
   return localStorage.getItem(name) || '';
 }
@@ -36,7 +36,7 @@ function getItemFromStorage(name){
  * @param {string} name
  * @param {string} item
  */
-function storeItemInStorage(name, item){
+function storeItemInStorage(name, item) {
   const localStorage = getLocalStorage();
   localStorage.setItem(name, item);
 }
@@ -45,7 +45,7 @@ function storeItemInStorage(name, item){
  * Remove element from server localStorage
  * @param {string} name
  */
-function removeFromStorage(name){
+function removeFromStorage(name) {
   const localStorage = getLocalStorage();
   localStorage.removeItem(name);
 }
@@ -54,7 +54,7 @@ function removeFromStorage(name){
  * Get element from configuration file
  * @param {string} name
  */
-function getFromConfig(item){
+function getFromConfig(item) {
   return config[item];
 }
 
@@ -65,4 +65,4 @@ export default {
   storeItemInStorage,
   removeFromStorage,
   getFromConfig
-}
+};

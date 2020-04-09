@@ -6,7 +6,7 @@ const swaggerDocument = require('./swagger.json');
 const cors = require('cors');
 const helper = require('./utils/logger');
 const logger = helper.getLogger('index');
-const { notFoundRequest } = require('./helpers/responseHelper')
+const { notFoundRequest } = require('./helpers/responseHelper');
 
 const app = express();
 
@@ -21,7 +21,7 @@ app.use(bodyParser.urlencoded({
 
 app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
 
-app.get('*', function(req, res){
+app.get('*', function(req, res) {
   logger.error('Route not found');
   notFoundRequest(res, {});
 });
