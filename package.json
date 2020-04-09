@@ -1,0 +1,26 @@
+{
+  "name": "api-boilerplate",
+  "version": "1.0.0",
+  "description": "Boilerplate for Express RESTful API",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shaneBen23/api-boilerplate.git"
+  },
+  "keywords": [
+    "node.js",
+    "Express",
+    "MongoDB",
+    "API",
+    "REST"
+  ],
+  "author": "Shane Benjamin",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/shaneBen23/api-boilerplate/issues"
+  },
+  "homepage": "https://github.com/shaneBen23/api-boilerplate#readme"
+}
