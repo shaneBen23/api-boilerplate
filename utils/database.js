@@ -1,5 +1,5 @@
-const helper = require('./helper');
-const logger = helper.getLogger('databaseUtils');
+const getLogger = require('../utils/logger');
+const logger = getLogger('databaseUtils');
 const mongoose = require('mongoose');
 const config = require('../config');
 

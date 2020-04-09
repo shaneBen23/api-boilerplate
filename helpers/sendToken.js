@@ -19,6 +19,4 @@ function sendToken(user, resolve) {
   resolve(response);
 }
 
-module.exports = {
-  sendToken
-};
+module.exports = sendToken;

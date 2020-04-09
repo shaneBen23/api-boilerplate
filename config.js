@@ -5,7 +5,7 @@ module.exports = {
     PORT: 3000
   },
   db: {
-    MONGO_URL_SERVICE: 'mongodb://nodeadmin:nodepwd@localhost:30001/nodedb?authSource=admin',
+    MONGO_URL_SERVICE: 'mongodb://nodeadmin:nodepwd@localhost:27017/nodedb?authSource=admin',
     MONGO_CONFIG: { useNewUrlParser: true, poolSize: 20, useUnifiedTopology: true }
   },
   API1_HOST_URL: 'http://<domain1>',

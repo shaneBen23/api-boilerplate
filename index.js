@@ -4,9 +4,10 @@ const swaggerUi = require('swagger-ui-express');
 const config = require('./config');
 const swaggerDocument = require('./swagger.json');
 const cors = require('cors');
-const helper = require('./utils/logger');
-const logger = helper.getLogger('index');
+const getLogger = require('./utils/logger');
+const logger = getLogger('index');
 const { notFoundRequest } = require('./helpers/responseHelper');
+const usersRoutes = require('./routes/users');
 
 const app = express();
 
@@ -19,9 +20,15 @@ app.use(bodyParser.urlencoded({
   extended: false
 }));
 
+app.use('/users', usersRoutes);
 app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
 
 app.get('*', function(req, res) {
+  logger.error('Route not found');
+  notFoundRequest(res, {});
+});
+
+app.post('*', function(req, res) {
   logger.error('Route not found');
   notFoundRequest(res, {});
 });

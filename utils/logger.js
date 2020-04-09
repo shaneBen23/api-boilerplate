@@ -7,6 +7,4 @@ function getLogger(moduleName) {
   return logger;
 };
 
-module.exports = {
-  getLogger
-};
+module.exports = getLogger;
