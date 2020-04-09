@@ -1,0 +1,19 @@
+version: "3.7"
+services:
+  mongodb:
+    container_name: mongodb
+    image: mongo
+    env_file:
+        mongodb.env
+    ports:
+      - '27017:27017'
+      
+  mongo-express:
+    container_name: mongo-express
+    image: mongo-express
+    depends_on:
+      - mongodb
+    env_file:
+        mongo-express.env
+    ports:
+      - '8081:8081'
