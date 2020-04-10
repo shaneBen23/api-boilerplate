@@ -39,14 +39,21 @@
             "name": "email",
             "in": "formData",
             "description": "Enter Email",
-            "required": false,
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "username",
+            "in": "formData",
+            "description": "Enter Username",
+            "required": true,
             "type": "string"
           },
           {
             "name": "password",
             "in": "formData",
             "description": "Enter password",
-            "required": false,
+            "required": true,
             "type": "password"
           }
         ],
@@ -78,7 +85,14 @@
             "name": "email",
             "in": "formData",
             "description": "Enter email",
-            "required": true,
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "username",
+            "in": "formData",
+            "description": "Enter username",
+            "required": false,
             "type": "string"
           },
           {

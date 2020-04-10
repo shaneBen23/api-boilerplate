@@ -8,7 +8,7 @@ async function registerUser(req, res) {
   const { username, email, password } = req.body;
   const data = { username, email, password };
   await service.registerUser(data).then((userDetails) => {
-    logger.info('registerUser', 'data received');
+    logger.info('registerUser', 'User registered');
     successfulRequest(res, userDetails);
   }).catch((error) => {
     logger.error('registerUser', 'exception occured', error);
@@ -21,7 +21,7 @@ async function authenticate(req, res) {
   const { username, email, password } = req.body;
   const data = { username, email, password };
   await service.authenticate(data).then((userDetails) => {
-    logger.info('authenticate', 'data received');
+    logger.info('authenticate', 'User authenticated');
     successfulRequest(res, userDetails);
   }).catch((error) => {
     logger.error('authenticate', 'exception occured', error);

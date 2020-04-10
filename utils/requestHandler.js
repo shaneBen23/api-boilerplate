@@ -70,7 +70,7 @@ async function putRequest(hostUrl, token, endPoint, data) {
   return await instance.put(endPoint, data);
 }
 
-export default {
+module.exports = {
   getRequest,
   postRequest,
   putRequest
