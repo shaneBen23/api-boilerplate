@@ -33,7 +33,7 @@
     "express": "^4.17.1",
     "express-bearer-token": "^2.4.0",
     "express-jwt": "^5.3.3",
-    "log4js": "^6.1.2",
+    "log4js": "^6.4.0",
     "mongodb": "^3.5.5",
     "mongoose": "^5.9.7",
     "node-localstorage": "^2.1.5",
